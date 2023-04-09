@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class App {
+  
+    public static void main(String[] args) throws Exception {
+
+        Scanner teclado = new Scanner(System.in);
+
+         System.out.println("Informe o peso do peixe em Kg: ");
+         double p = teclado.nextDouble();
+       
+         double excesso = p - 50;
+
+         double multa = excesso * 4.00;
+
+         if ( p > 50 ) {  
+               
+            System.out.printf("Seu peixe excede o limite em: %.2fKg", excesso);
+            
+            System.out.printf("Gerando uma multa de : %.2f reais", multa);
+         } else { 
+            System.out.printf("Seu peixe está dentro do peso limite!");
+         }
+        teclado.close();
+
+    }
+}
